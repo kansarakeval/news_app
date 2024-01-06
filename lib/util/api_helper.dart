@@ -22,8 +22,8 @@ class APIHelper {
   }
 
   //apple
- Future<AppleNewsModel?> appleApiCall() async {
-    String apiLink = "https://newsapi.org/v2/everything?q=apple&from=2024-01-05&to=2024-01-05&sortBy=popularity&apiKey=462c7412b507426585d7957aa32af462";
+ Future<AppleNewsModel?> appleApiCall(String mobile) async {
+    String apiLink = "https://newsapi.org/v2/everything?q=$mobile&from=2024-01-05&to=2024-01-05&sortBy=popularity&apiKey=462c7412b507426585d7957aa32af462";
     var response = await http.get(Uri.parse(apiLink));
     if(response.statusCode == 200){
       var json = jsonDecode(response.body);

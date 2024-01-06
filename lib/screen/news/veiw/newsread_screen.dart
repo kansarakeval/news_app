@@ -36,6 +36,7 @@ class _NewsReadScreenState extends State<NewsReadScreen> {
                     ),
                   ),
                 ),
+                SizedBox(height: 10,),
                 Text(
                   "Author: ${model.author!}",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),

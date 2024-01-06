@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/screen/apple/model/apple_model.dart';
+import 'package:news_app/screen/tesla/model/tesla_model.dart';
 
-class AppleNewsScreen extends StatefulWidget {
-  const AppleNewsScreen({super.key});
+class TeslaNewsScreen extends StatefulWidget {
+  const TeslaNewsScreen({super.key});
 
   @override
-  State<AppleNewsScreen> createState() => _AppleNewsScreenState();
+  State<TeslaNewsScreen> createState() => _TeslaNewsScreenState();
 }
 
-class _AppleNewsScreenState extends State<AppleNewsScreen> {
+class _TeslaNewsScreenState extends State<TeslaNewsScreen> {
   @override
   Widget build(BuildContext context) {
-    AppleArticlesModel model =
-    ModalRoute.of(context)!.settings.arguments as AppleArticlesModel;
+    TeslaArticlesModel model =
+    ModalRoute.of(context)!.settings.arguments as TeslaArticlesModel;
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text(model.appleSourceModel!.name!),
+          title: Text(model.teslaSourceModel!.name!),
           centerTitle: true,
         ),
         body: Padding(
