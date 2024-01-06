@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/screen/apple/view/apple_screen.dart';
 import 'package:news_app/screen/dash/provider/dash_provider.dart';
 import 'package:news_app/screen/news/veiw/news_screen.dart';
+import 'package:news_app/screen/tesla/veiw/tesla_screen.dart';
 import 'package:provider/provider.dart';
 
 class DashScreen extends StatefulWidget {
@@ -15,8 +17,8 @@ class _DashScreenState extends State<DashScreen> {
   DashProvider? providerw;
   List<Widget> dashList=[
     const NewsScreen(),
-    const NewsScreen(),
-    const NewsScreen(),
+    const AppleScreen(),
+    const TeslaScreen(),
 
   ];
 
