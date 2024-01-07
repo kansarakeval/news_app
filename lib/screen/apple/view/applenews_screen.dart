@@ -29,7 +29,12 @@ class _AppleNewsScreenState extends State<AppleNewsScreen> {
                   alignment: Alignment.center,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
-                    child: Image.network(
+                    child: model.urlToImage ==null? Image.network(
+                    "https://www.apple.com/newsroom/images/product/iphone/geo/apple_iphone-12_new-design_geo_10132020_big.jpg.large.jpg",
+                    height: 200,
+                    fit: BoxFit.cover,
+                  )
+                  :Image.network(
                       model.urlToImage!,
                       height: 200,
                       fit: BoxFit.cover,

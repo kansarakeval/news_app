@@ -93,7 +93,7 @@ class _NewsScreenState extends State<NewsScreen> {
                                 .articlesList![index].urlToImage ==
                                 null
                                 ? Image.network(
-                              "https://media.istockphoto.com/id/1311148884/vector/abstract-globe-background.jpg?s=2048x2048&w=is&k=20&c=ZyHCcX0F_DVM-r_R_vG8OX_CqYLb-G16afTyaVGtB3o=",
+                              "https://st.depositphotos.com/1006899/3776/i/450/depositphotos_37765339-stock-photo-news.jpg",
                               width: 100,
                               height: 100,
                               fit: BoxFit.cover,
@@ -111,11 +111,14 @@ class _NewsScreenState extends State<NewsScreen> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                "${providerw!.newsModel!.articlesList![index].sourceModel!.name}",
-                                style: TextStyle(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.bold),
+                              SizedBox(
+                                width: 200,
+                                child: Text(
+                                  "${providerw!.newsModel!.articlesList![index].sourceModel!.name}",
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.bold),overflow: TextOverflow.ellipsis,
+                                ),
                               ),
                               SizedBox(
                                 width: 200,

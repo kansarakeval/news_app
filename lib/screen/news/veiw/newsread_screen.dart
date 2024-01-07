@@ -29,7 +29,12 @@ class _NewsReadScreenState extends State<NewsReadScreen> {
                   alignment: Alignment.center,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
-                    child: Image.network(
+                    child: model.urlToImage == null? Image.network(
+                    "https://st.depositphotos.com/1006899/3776/i/450/depositphotos_37765339-stock-photo-news.jpg",
+                    height: 200,
+                    fit: BoxFit.cover,
+                  )
+                  :Image.network(
                       model.urlToImage!,
                       height: 200,
                       fit: BoxFit.cover,
@@ -42,12 +47,11 @@ class _NewsReadScreenState extends State<NewsReadScreen> {
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                 ),
                 SizedBox(height: 10,),
-                SizedBox(height: 10,),
                 Text(
                   "Title: ${model.title!}",
                   style: TextStyle(fontStyle: FontStyle.italic, fontSize: 20),
                 ),
-                SizedBox(height: 10,),
+                Divider(thickness: 1,color: Colors.black),
                 Text(
                   "Description: ${model.description!}",
                   style: TextStyle(fontStyle: FontStyle.italic, fontSize: 18),

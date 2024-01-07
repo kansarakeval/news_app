@@ -34,8 +34,8 @@ class APIHelper {
  }
 
  //tesla
-Future<TeslaNewsModel?> teslaApiCall() async {
-    String apiList ="https://newsapi.org/v2/everything?q=tesla&from=2023-12-06&sortBy=publishedAt&apiKey=462c7412b507426585d7957aa32af462";
+Future<TeslaNewsModel?> teslaApiCall(String tesla) async {
+    String apiList ="https://newsapi.org/v2/everything?q=$tesla&from=2023-12-07&sortBy=publishedAt&apiKey=462c7412b507426585d7957aa32af462";
     var response = await http.get(Uri.parse(apiList));
     if(response.statusCode == 200){
       var json = jsonDecode(response.body);
