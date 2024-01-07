@@ -32,15 +32,18 @@ class _TeslaScreenState extends State<TeslaScreen> {
         ),
         body: Column(
           children: [
-            SearchBar(
-              hintText: "search bar",
-              trailing: [
-                Icon(Icons.search),
-              ],
-              onSubmitted: (value) {
-                providerr!.teslaSearchData(value);
-                providerr!.getTeslaData();
-              },
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: SearchBar(
+                hintText: "search bar",
+                trailing: [
+                  Icon(Icons.search),
+                ],
+                onSubmitted: (value) {
+                  providerr!.teslaSearchData(value);
+                  providerr!.getTeslaData();
+                },
+              ),
             ),
             providerw!.teslaNewsModel == null
                 ? const Center(
