@@ -17,6 +17,7 @@ void main(){
         ],
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
+          theme: ThemeData(useMaterial3: true),
           routes: appRoutes,
         ),
       )

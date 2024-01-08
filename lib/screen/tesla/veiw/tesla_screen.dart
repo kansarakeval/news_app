@@ -36,6 +36,7 @@ class _TeslaScreenState extends State<TeslaScreen> {
               padding: const EdgeInsets.all(10),
               child: SearchBar(
                 hintText: "search bar",
+                elevation: MaterialStatePropertyAll(0.5),
                 trailing: [
                   Icon(Icons.search),
                 ],

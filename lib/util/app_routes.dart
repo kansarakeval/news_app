@@ -8,7 +8,7 @@ import 'package:news_app/screen/tesla/veiw/teslanews_screen.dart';
 Map<String,WidgetBuilder> appRoutes={
   '/': (context) => const SplashScreen(),
   'dash': (context) => const DashScreen(),
-  'newsread':(context) => NewsReadScreen(),
-  'applenews':(context) => AppleNewsScreen(),
-  'teslanews':(context) => TeslaNewsScreen(),
+  'newsread':(context) => const NewsReadScreen(),
+  'applenews':(context) => const AppleNewsScreen(),
+  'teslanews':(context) => const TeslaNewsScreen(),
 };
